@@ -1,45 +1,52 @@
 "use client"
-
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 function Adult() {
   const [isAdult, setIsAdult] = useState(false)
+  const [images, setImages] = useState([])
   const router = useRouter()
-
-  function handleSubmit(e){  
-    e.preventDefault();
-
-    if(isAdult && e.target.close){
-      e.target.close()
-    }else{
-      router.push("/")
-    }
-  }
 
   useEffect(()=> {
     dialog.showModal()
   },[])
+
+  function handleForm(e){
+    const value = e.target.getAttribute('data-value');
+    if(value === 'true'){
+
+      setIsAdult(true)
+    }else{
+      router.push("/")
+      
+    }
+  }
 
 
   return (
    <section className='container m-auto h-[95vh] '>
     {isAdult ?
       <div className='grid grid-cols-3 h-full justify-center items-center'>
-          PERMITIDO
+          
+          <h1 className='text-3xl col-start-2 text-center'>Content</h1>
       </div>
       :
       <div className='h-full flex justify-center items-center '>
-        <dialog id='dialog' className='w-3/6 h-3/6 bg-rose-400 rounded-md shadow-xl shadow-rose-500 backdrop:bg-rose-500 backdrop:opacity-50'>
-            <form onSubmit={handleSubmit}  className='flex flex-col justify-center items-center gap-4 h-full'>
-                <h3>Are you 18+?</h3>
+        <div className='text-xl bg-rose-300 p-8 rounded-md text-white lowercase cursor-pointer shadow-xl shadow-rose-500 hover:scale-105  transition' onClick={()=> router.push("/")}>
+          You should not be here, lets go back!
+        </div>
+        <dialog id='dialog' className='scaleIn w-3/6 h-3/6 bg-rose-100 rounded-md  backdrop:opacity-50
+            backdrop:bg-black 
+          '>
+          {/* backdrop:bg-gradient-to-r backdrop:from-rose-400 backdrop:to-orange-300  */}
+            <div className='flex flex-col justify-center items-center gap-8 h-full '>
+                <h3 className='text-xl'>Are you 18+?</h3>
                 <div className='flex justify-around items-center gap-4'>
-                  <button type='button' onClick={()=> setIsAdult(true)} className='bg-rose-300 rounded-md px-8 py-2 hover:bg-rose-500 shadow-xl shadow-rose-500 transition'>Yes</button>
-                  <button type='button' onClick={()=> setIsAdult(false)} className='bg-rose-300 rounded-md px-8 py-2 hover:bg-rose-500 shadow-xl shadow-rose-500 transition'>No</button>
+                  <button type='submit' onClick={handleForm} data-value='true' className='bg-rose-300 rounded-md px-8 py-2 hover:bg-rose-400   transition'>Yes</button>
+                  <button type='submit' onClick={handleForm} data-value='false' className='bg-rose-300 rounded-md px-8 py-2 hover:bg-rose-400  transition '>No, let's go back</button>
                 </div>
-                  <button type='submit' className='bg-rose-300 rounded-md px-8 py-2 hover:bg-rose-500 shadow-xl shadow-rose-500 transition'>Submit</button>
-            </form>
+            </div>
         </dialog>
       </div>
     }

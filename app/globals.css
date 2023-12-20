@@ -2,8 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  @apply bg-rose-200 text-black  ;
-  height: 100vh;
 
+:root {
+  /* --bg-nav: rgb(253 164 175); */
+  --bg-nav: rgb(254 205 211);
+  --bg-accents: rgb(244 63 94);
+  --shadows:  rgb(251 113 133)
+
+}
+body{
+  /* @apply bg-gradient-to-br from-rose-300 to-purple-300 text-black  bg-rose-400 ; */
+  @apply bg-white text-black ;
+  /* bg-gradient-to-r from-rose-400 to-orange-300 */
+  min-height: 100vh;
+  height: 100%;
+
+}
+
+ul, h3{
+  text-shadow: 0px 0px 1px rgb(97, 97, 97);
+}
+
+.slideLeft{
+  animation: fadeIn 1s ease-out;
+}
+.scaleIn{
+  animation: scaleIn 0.2s ease-out;
+}
+
+
+@keyframes fadeIn  {
+  0% {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn  {
+  0% { scale: 0.7}
+  100% { scale: 1}
 }

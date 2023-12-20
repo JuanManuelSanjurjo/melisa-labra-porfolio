@@ -1,10 +1,12 @@
 import React from 'react'
 
 function About() {
+  
+
   return (
-    <div className='container m-auto flex flex-col justify-center items-center h-[95vh] gap-10 selection:bg-rose-500'>
+    <div className='slideLeft container m-auto flex flex-col justify-center items-center h-[95vh] gap-10 selection:bg-rose-200'>
       <h1 className='text-3xl uppercase tracking-widest font-thin'>About me</h1>
-      <p className='leading-loose tracking-wide selection:bg-rose-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolores molestias sunt ipsa deleniti repellendus ea fugiat ratione accusamus laboriosam enim eaque quae facere blanditiis, eos neque aspernatur? Doloremque, illo.
+      <p className='leading-loose tracking-wide'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolores molestias sunt ipsa deleniti repellendus ea fugiat ratione accusamus laboriosam enim eaque quae facere blanditiis, eos neque aspernatur? Doloremque, illo.
       Repellat tempora error ipsa quam at laboriosam quod natus illum laborum nemo repellendus, vero quo amet nesciunt iure magnam voluptatem aliquid fugit. Voluptas odit, veniam provident esse maxime soluta impedit?
       Alias quae iure facilis aliquam illum neque deserunt, veniam eius quia quasi fuga praesentium delectus labore. Dolore minima rem commodi quibusdam odio perferendis libero molestias tempora architecto eius. Sed, qui.
       Quae nam dicta labore minima sit doloribus ratione libero, cum quo distinctio tempora cumque quaerat quis aspernatur hic explicabo! Provident, modi minima praesentium perferendis tempore sapiente deserunt corporis dolorem aut.
