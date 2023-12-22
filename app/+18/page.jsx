@@ -15,11 +15,9 @@ function Adult() {
   function handleForm(e){
     const value = e.target.getAttribute('data-value');
     if(value === 'true'){
-
       setIsAdult(true)
     }else{
       router.push("/")
-      
     }
   }
 
@@ -33,8 +31,8 @@ function Adult() {
       </div>
       :
       <div className='h-full flex justify-center items-center '>
-        <div className='text-xl bg-rose-300 p-8 rounded-md text-white lowercase cursor-pointer shadow-xl shadow-rose-500 hover:scale-105  transition' onClick={()=> router.push("/")}>
-          You should not be here, lets go back!
+        <div className='text-xl bg-rose-400 p-8 rounded-md text-white lowercase cursor-pointer shadow-xl shadow-rose-500 hover:scale-105  transition' onClick={()=> router.push("/")}>
+          You should not be here, let&apos;s go back!
         </div>
         <dialog id='dialog' className='scaleIn w-3/6 h-3/6 bg-rose-100 rounded-md  backdrop:opacity-50
             backdrop:bg-black 
@@ -44,7 +42,8 @@ function Adult() {
                 <h3 className='text-xl'>Are you 18+?</h3>
                 <div className='flex justify-around items-center gap-4'>
                   <button type='submit' onClick={handleForm} data-value='true' className='bg-rose-300 rounded-md px-8 py-2 hover:bg-rose-400   transition'>Yes</button>
-                  <button type='submit' onClick={handleForm} data-value='false' className='bg-rose-300 rounded-md px-8 py-2 hover:bg-rose-400  transition '>No, let's go back</button>
+                  <button type='submit' onClick={handleForm} data-value='false' className='bg-rose-300 rounded-md px-8 py-2 hover:bg-rose-400  transition '>No, let&apos;s go back</button>
+
                 </div>
             </div>
         </dialog>
@@ -55,3 +54,4 @@ function Adult() {
 }
 
 export default Adult
+

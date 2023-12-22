@@ -24,10 +24,14 @@ ul, h3{
 }
 
 .slideLeft{
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 0.8s ease-out;
 }
 .scaleIn{
   animation: scaleIn 0.2s ease-out;
+}
+
+.imageFadeIn{
+  animation: imageFadeIn 1s ease-out;
 }
 
 
@@ -47,4 +51,9 @@ ul, h3{
 @keyframes scaleIn  {
   0% { scale: 0.7}
   100% { scale: 1}
+}
+
+@keyframes imageFadeIn  {
+  0% { opacity: 0}
+  100% { opacity: 1}
 }
