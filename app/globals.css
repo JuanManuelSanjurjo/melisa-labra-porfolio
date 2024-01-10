@@ -34,6 +34,9 @@ ul, h3{
   animation: imageFadeIn 1s ease-out;
 }
 
+.navFadeIn{
+  animation: imageFadeIn 0.5s ease-in-out;
+}
 
 @keyframes fadeIn  {
   0% {

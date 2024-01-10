@@ -1,14 +1,30 @@
 import React from 'react'
+import { coloringNavLinks } from '@/lib/nav-links'
+import Image from 'next/image'
+import Link from 'next/link'
 
-function ColoringBooks() {
+function ColoringBooksMain() {
   return (
-    <section className='container m-auto h-[95vh] '>
-      <div className='grid grid-cols-3 h-full justify-center items-center'>
-        
-        <h1 className='text-3xl col-start-2 text-center'>Coloring Books</h1>
-      </div>
-    </section>
+    <div className='flex min-h-[80vh] mt-4 items-center justify-center '>
+        <div className='flex w-full justify-center text-center flex-wrap'>
+        {
+            coloringNavLinks.map((book, i) => (
+                <Link key={i} href={book.href} className='flex flex-col justify-start'>
+                    <h1 className='font-bold tracking-wide'>{book.name}</h1>
+                    <Image 
+                        src={book.coverSrc}
+                        width={350}
+                        height={350}
+                        alt={book.name}
+                        className=' w-auto h-auto'
+                    />
+                </Link>
+            ))
+        }
+        </div>
+    </div>
   )
+
 }
 
-export default ColoringBooks
+export default ColoringBooksMain

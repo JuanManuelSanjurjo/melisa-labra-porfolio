@@ -1,5 +1,11 @@
 import React from 'react'
 
+export const metadata = {
+  title: 'Contact',
+  description: 'Contact - Melisa Labra',
+}
+
+
 function Contact() {
   return (
     <div className='slideLeft m-auto flex flex-col justify-center items-start h-[95vh] w-72 gap-10 selection:bg-rose-200 tracking-widest'>

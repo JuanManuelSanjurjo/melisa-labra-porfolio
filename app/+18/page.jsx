@@ -1,7 +1,10 @@
 "use client"
-import React from 'react'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import Link from 'next/link'
+import { adultBooks } from '@/lib/nav-links'
+
 
 function Adult() {
   const [isAdult, setIsAdult] = useState(false)
@@ -25,9 +28,23 @@ function Adult() {
   return (
    <section className='container m-auto h-[95vh] '>
     {isAdult ?
-      <div className='grid grid-cols-3 h-full justify-center items-center'>
-          
-          <h1 className='text-3xl col-start-2 text-center'>Content</h1>
+        <div className='flex min-h-[80vh] items-center justify-center'>
+          <div className='flex justify-center gap-4 text-center'>
+          {
+            adultBooks.map((book, i) => (
+                  <Link key={i} href={book.href} className='flex flex-col justify-start border-slate-900 border-[1px] hover:bg-rose-100  hover:shadow-lg transition-all'>
+                      <h1 className='font-bold tracking-wide m-4 '>{book.name}</h1>
+                      <Image 
+                          src={book.coverSrc}
+                          width={400}
+                          height={400}
+                          alt={book.name}
+                          className='object-fill'
+                      />
+                  </Link>
+              ))
+          }
+          </div>
       </div>
       :
       <div className='h-full flex justify-center items-center '>
