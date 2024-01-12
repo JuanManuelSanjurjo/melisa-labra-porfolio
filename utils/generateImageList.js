@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 // Define la ubicación de tu directorio de imágenes
-const imageDirectory = path.join(process.cwd(), 'public', 'images', "covers");
-const eroticDirectory = path.join(process.cwd(), 'public', 'images', "erotico");
-const coloringBooksDirectory = path.join(process.cwd(), 'public', 'images', "coloring-books");
+const imageDirectory = path.join(process.cwd(), 'public', 'Images', "covers");
+const eroticDirectory = path.join(process.cwd(), 'public', 'Images', "erotico");
+const coloringBooksDirectory = path.join(process.cwd(), 'public', 'Images', "coloring-books");
 
 // Lee los nombres de los archivos en el coverDirectory de imágenes
 const coverImages = fs.readdirSync(imageDirectory);
@@ -20,15 +20,15 @@ const images = {
 
 
 images.covers = coverImages.map((filename) => ({
- src: `/images/${filename}`,
+ src: `/Images/${filename}`,
  alt: `${filename}`,
 }));
 images.erotic = eroticImages.map((filename) => ({
- src: `/images/${filename}`,
+ src: `/Images/${filename}`,
  alt: `${filename}`,
 }));
 images["coloring-books"] = coloringBooksImages.map((filename) => ({
- src: `/images/${filename}`,
+ src: `/Images/${filename}`,
  alt: `${filename}`,
 }));
 
