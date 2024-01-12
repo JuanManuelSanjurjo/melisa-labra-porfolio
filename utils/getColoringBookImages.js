@@ -9,6 +9,8 @@ function getColoringBookImages( subPath, name){
         // Lee los nombres de los archivos en el coverDirectory de imágenes
         const coverImages = fs.readdirSync(imageDirectory);
         
+
+        
         const images = coverImages.map((filename) => ({
          src: `/images/${subPath}/${name}/${filename}`,
          alt: `${filename}`,
