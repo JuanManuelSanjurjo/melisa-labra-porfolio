@@ -4,23 +4,20 @@ import { useRef, useState, Suspense } from "react";
 import ImageSkeleton from "./imageSkeleton";
 
 function ImageComponent({img, style}) {
-  const [image, setImage] = useState({});
   const ref = useRef(null);
-
 
   function handleImageOpen(e,img) {
     e.preventDefault()
     const dialog = ref.current;
     if (dialog){
-    setImage({img})
-    dialog.showModal()
+      dialog.showModal()
     }
 }
 function handleClose(e){
   const dialog = ref.current
   if(e.target === dialog && dialog.open){
     dialog.close()
-}
+  }
 }
 
   return (
@@ -46,7 +43,7 @@ function handleClose(e){
               alt={img.alt} 
               width={400}
               height={400}
-              className='w-auto h-auto max-h-[90vh] max-w-[90vw]'
+              className='w-auto h-auto max-h-[90vh] max-w-[90vw] '
             />
       </dialog>
     </>

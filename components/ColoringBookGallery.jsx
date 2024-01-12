@@ -1,9 +1,11 @@
+import React from 'react';
 import ImageComponent from "@/components/ImageComponent";
 import { getColoringBookImages } from "@/utils/getColoringBookImages";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 function ColoringBooksGallery({subpath, bookName}) {
+
   const images = getColoringBookImages(subpath, bookName);
 
   return (
@@ -27,4 +29,5 @@ function ColoringBooksGallery({subpath, bookName}) {
   );
 }
 
-export default ColoringBooksGallery;
+export default React.memo(ColoringBooksGallery);
+

@@ -4,10 +4,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { mainNavLinks } from '@/lib/nav-links'
 
-
 function Navbar() {
   const pathname = usePathname()
-  
   return (
     <nav className='flex justify-center items-center gap-8 bg-rose-100 h-[5vh] px-10 font-semibold lowercase tracking-widest w-full'>
         <Link href={"/"} className='hover:text-white transition'>

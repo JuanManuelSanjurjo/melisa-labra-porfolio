@@ -13,13 +13,13 @@ function Adult() {
 
   useEffect(()=> {
     dialog.showModal()
-  },[])
+  },[]) 
 
   function handleForm(e){
     const value = e.target.getAttribute('data-value');
     if(value === 'true'){
       setIsAdult(true)
-    }else{
+    }else{  
       router.push("/")
     }
   }
