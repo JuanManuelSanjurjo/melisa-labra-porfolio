@@ -11,10 +11,10 @@ function ColoringBooksGallery({subpath, bookName}) {
   return (
     <>
       <div>
-        <h1 className="text-3xl col-start-2 text-center m-10  ">{bookName}</h1>
+        <h1 className="pt-12 md:pt-0 text-3xl col-start-2 text-center m-10  ">{bookName}</h1>
       </div>
-      <section className="container m-auto h-[95vh]  ">
-        <div className="sm:columns-1 md:columns-2 lg:columns-3 gap-2 justify-center items-center">
+      <section className="container m-auto h-[95vh]">
+        <div className= "pb-12 md:pb-0  columns-1 md:columns-2 lg:columns-3 gap-2 justify-center items-center">
           {images.map((img) => (
             <div
               key={img.index}

@@ -15,7 +15,8 @@ function CoversPage() {
 
   return (
     <div className='flex min-h-[80vh] mt-4 items-center justify-center '>
-        <div className='flex w-full justify-center text-center flex-wrap'>
+    <h2>In development</h2>
+        {/* <div className='flex w-full justify-center text-center flex-wrap'>
         {
           images.map((book, i) => (
               
@@ -29,7 +30,7 @@ function CoversPage() {
        
             ))
         }
-        </div>
+        </div> */}
     </div>
   )
 

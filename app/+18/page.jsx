@@ -26,10 +26,10 @@ function Adult() {
 
 
   return (
-   <section className='container m-auto h-[95vh] '>
+   <section className='pt-12 md:pt-0 container m-auto h-[95vh] '>
     {isAdult ?
         <div className='flex min-h-[80vh] items-center justify-center'>
-          <div className='flex justify-center gap-4 text-center'>
+          <div className='flex flex-col md:flex-row p-14 justify-center  gap-4 text-center'>
           {
             adultBooks.map((book, i) => (
                   <Link key={i} href={book.href} className='flex flex-col justify-start border-slate-900 border-[1px] hover:bg-rose-100  hover:shadow-lg transition-all'>
@@ -48,10 +48,10 @@ function Adult() {
       </div>
       :
       <div className='h-full flex justify-center items-center '>
-        <div className='text-xl bg-rose-400 p-8 rounded-md text-white lowercase cursor-pointer shadow-xl shadow-rose-500 hover:scale-105  transition' onClick={()=> router.push("/")}>
+        <div className='hidden md:block text-xl bg-rose-400 p-8 rounded-md text-white lowercase cursor-pointer shadow-xl shadow-rose-500 hover:scale-105  transition' onClick={()=> router.push("/")}>
           You should not be here, let&apos;s go back!
         </div>
-        <dialog id='dialog' className='scaleIn w-3/6 h-3/6 bg-rose-100 rounded-md  backdrop:opacity-50
+        <dialog id='dialog' className='scaleIn w-auto h-2/6 md:w-3/6 md:h-3/6 bg-rose-100 rounded-md  backdrop:opacity-50
             backdrop:bg-black 
           '>
           {/* backdrop:bg-gradient-to-r backdrop:from-rose-400 backdrop:to-orange-300  */}

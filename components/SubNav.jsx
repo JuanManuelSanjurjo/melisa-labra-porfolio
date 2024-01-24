@@ -7,10 +7,10 @@ function SubNav({ navLinks}) {
   const pathname = usePathname()
 
   return (
-    <nav className='navFadeIn flex justify-center items-center gap-8 bg-rose-50 h-[5vh] px-10 font-semibold lowercase tracking-widest w-full rounded-b-xl shadow-sm'>
+    <nav className='navFadeIn hidden md:flex justify-center items-center gap-8 bg-rose-50 h-[5vh] px-10 font-semibold lowercase tracking-widest w-full rounded-b-xl shadow-sm'>
 
     <div className='flex w-full justify-start'>
-        <ul className='flex gap-6 w-full justify-start font-thin text-sm '>
+        <ul className='flex flex-col md:flex-row  gap-6 w-full justify-start font-thin text-sm '>
           {
             navLinks.map((tab,i) => (
               <div key={i} className='relative group'>

@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 function ColoringBooksMain() {
   return (
-    <div className='flex min-h-[80vh] mt-4 items-center justify-center '>
+    <div className='pt-12 md:pt-0 flex min-h-[80vh] mt-4 items-center justify-center '>
         <div className='flex w-full justify-center text-center flex-wrap'>
         {
             coloringNavLinks.map((book, i) => (
