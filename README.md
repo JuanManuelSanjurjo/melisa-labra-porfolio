@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Melisa Labra's Portfolio  
 
-## Getting Started
+This project is a work-in-progress portfolio for illustrator Melisa Labra. As the client is still finalizing the content and design details, the project is not yet fully completed. However, the current state of the page can be viewed at [Melisa Labra's Portfolio](https://melisa-labra-porfolio.vercel.app/), where it is hosted on Vercel.
 
-First, run the development server:
+The project uses Next.js 14 and App Router, along with Tailwind CSS. Currently, it is in its desktop version with an upcoming adjustment for responsiveness.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The page includes standard portfolio navigation, featuring a landing section, an 'About' section, a 'Contact' section, and various sections displaying the artist's works. These tabs have subcategories accessible through a secondary navigation. Users can view both the image gallery and the expanded versions of each image.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project also includes a section for content rated over 18 years old. To access this section, users must confirm that they are at least 18 years old. This feature adds an extra layer of age verification to the website, ensuring that only appropriate content is accessed by those who meet the age requirement.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# https://melisa-labra-porfolio.vercel.app/
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![image](https://github.com/JuanManuelSanjurjo/melisa-labra-porfolio/assets/57844658/28bfc28e-2cd3-4676-8640-8d47ebed8c47)
 
-## Learn More
+![image](https://github.com/JuanManuelSanjurjo/melisa-labra-porfolio/assets/57844658/7d21f0c7-ddd8-411a-92f3-df2490c6b74f)
 
-To learn more about Next.js, take a look at the following resources:
+![image](https://github.com/JuanManuelSanjurjo/melisa-labra-porfolio/assets/57844658/ebfa6632-6a38-4223-ae17-51e2404ae84c)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
